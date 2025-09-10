@@ -1,12 +1,37 @@
 :root {
     --primary-color: #612975;
+    --secondary-color: #292b36;
 }
 
 body {
-    background-color: #292b39;
+    background-color: #ccc;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #ccc;
     margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.oxygen-light {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.oxygen-regular {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.oxygen-bold {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .top_header {
@@ -14,35 +39,176 @@ body {
 }
 
 .max_width {
-    max-width: 120em;
+    max-width: 160em;
     /* 1920 resolution / 16px = 120 */
 }
 
-.top_nav ul {
+.top_header_nav ul {
     list-style-type: none;
     padding: 0;
-    display: flex;
-    gap: 2.2em;
+    margin-bottom: 0;
 }
 
-.top_nav a {
+.top_header_nav li {
+    padding: .5em;
+}
+
+.top_header_nav a {
     text-decoration: none;
-    color: #ccc;
-    background-color: var(--primary-color);
-    border-radius: 10%;
-    padding: 1.5em;
-    text-align: center;
-    font-size: 1.1rem;
+    color: white;
+    padding: 1.2em;
+    display: block;
 }
 
-.top_nav a:hover {
-    background-color: hsla(284, 48%, 43%, 0.212);
-    border-radius: 10%;
+.top_header_nav a:hover {
+    background-color: var(--secondary-color);
 }
 
-@media screen and (min-width: 48.75em) {
-    .top_nav {
+
+@media screen and (min-width: 120em) {
+
+    /* 1920 monitor */
+    .top_header {
         display: flex;
         justify-content: space-between;
+    }
+
+    .top_header_nav li {
+        display: inline-block;
+        font-size: 1.25em;
+    }
+
+    .top_header_nav a {
+        padding: 1.2em;
+        border-radius: 10%;
+        color: white;
+        background-color: transparent;
+    }
+
+    .top_header_logo {
+        margin-left: 30px;
+    }
+}
+
+@media screen and (min-width: 160em) {
+
+    /* 2560 monitor */
+    .top_header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .top_header_nav li {
+        display: inline-block;
+        font-size: 1.25em;
+
+    }
+
+    .top_header_nav a {
+        padding: 1em;
+    }
+
+    .top_header_logo {
+        margin-left: 30px;
+    }
+}
+
+@media screen and (min-width: 26.56em) {
+
+    /* mobile screen */
+    .top_header {
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    .top_header_logo {
+        margin-left: 30px;
+    }
+
+    .top_nav ul {
+        display: block;
+        gap: 2.2em;
+    }
+
+    .top_header_nav a {
+        background-color: var(--primary-color);
+    }
+}
+
+/* header ends - main starts */
+
+.hero_banner {
+    padding: 10em;
+    text-align: center;
+    background-color: #f6f6f6;
+    background-image: url(/images/bg_topo_1600x1374.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero_banner_title,
+.hero_banner_subtitle {
+    padding: .5em;
+    margin-bottom: 1.1em;
+    color: white;
+}
+
+.hero_banner_subtitle {
+    font-size: 1.4em;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+.hero_banner_icon img {
+    width: 5em;
+    height: 5em;
+}
+
+.hero_banner_btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: .5em;
+    border-radius: 10%;
+    box-shadow: 6px 4px 16px black;
+}
+
+.hero_banner_btn:hover {
+
+    background-color: var(--secondary-color);
+}
+
+.hero_banner a {
+    text-decoration: none;
+    font-size: 1.7em;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 120em) {
+
+    /* 1920 monitor */
+
+    .hero_banner_title,
+    .hero_banner_subtitle {
+        color: white;
+    }
+
+}
+
+@media screen and (min-width: 26.56em) {
+
+    /* mobile screen */
+
+    .hero_banner {
+        background-image: url(/images/bg_topo_1198x670.jpg);
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        text-shadow: 6px 4px 6px black;
     }
 }
