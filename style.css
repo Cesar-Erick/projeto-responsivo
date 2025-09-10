@@ -1,0 +1,30 @@
+:root {
+    --primary-color:
+}
+
+body {
+    background-color: #292b39;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ccc;
+    margin: 0;
+}
+
+.top_nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 2.2em;
+}
+
+.top_nav a {
+    text-decoration: none;
+    color: #ccc;
+    padding: 1.5em;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.top_nav a:hover {
+    background-color: rgba(95, 158, 160, 0.5);
+    border-radius: 10%;
+}
