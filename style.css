@@ -1,5 +1,5 @@
 :root {
-    --primary-color:
+    --primary-color: #612975;
 }
 
 body {
@@ -7,6 +7,15 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #ccc;
     margin: 0;
+}
+
+.top_header {
+    text-align: center;
+}
+
+.max_width {
+    max-width: 120em;
+    /* 1920 resolution / 16px = 120 */
 }
 
 .top_nav ul {
@@ -19,12 +28,21 @@ body {
 .top_nav a {
     text-decoration: none;
     color: #ccc;
+    background-color: var(--primary-color);
+    border-radius: 10%;
     padding: 1.5em;
     text-align: center;
     font-size: 1.1rem;
 }
 
 .top_nav a:hover {
-    background-color: rgba(95, 158, 160, 0.5);
+    background-color: hsla(284, 48%, 43%, 0.212);
     border-radius: 10%;
+}
+
+@media screen and (min-width: 48.75em) {
+    .top_nav {
+        display: flex;
+        justify-content: space-between;
+    }
 }
