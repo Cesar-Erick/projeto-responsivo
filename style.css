@@ -196,6 +196,10 @@ h4 {
         color: white;
     }
 
+    .col-md-6 {
+        width: 30%;
+    }
+
 }
 
 @media screen and (min-width: 26.56em) {
@@ -208,7 +212,6 @@ h4 {
         justify-content: center;
         align-items: flex-end;
     }
-
 
 }
 
@@ -265,21 +268,11 @@ h4 {
     }
 }
 
-@media screen and (min-width: 190em) {
-
-    .col-xl-3,
-    .main-content {
-        width: 100%;
-    }
-}
-
 /* Section info ends ~ main content start */
 
 .main-content {
     margin: 2em;
-
 }
-
 
 .main-content-article {
     container: main-content / inline-size;
